@@ -64,3 +64,8 @@ windows (example):
 ```cmd
 net_scanner.exe -n 1000 -c -p payloads.json
 ```
+---
+# Donate
+
+### btc: bc1q9kyn5c4xp5akz4jw466eq5j85xf3nak5789sd4
+### ton: UQCP53ar_DjWnNOP8SVbW5fKYhjgi5Bm-YEv-V-noQqnVEPp
