@@ -4,7 +4,7 @@ Copyright (c) 2025 cxdsad
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to use,
-copy, modify, and distribute the Software **only for non-commercial purposes**,
+copy, modify, and distribute the Software only for non-commercial purposes,
 subject to the following conditions:
 
 1. The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
@@ -17,3 +17,5 @@ PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIG
 HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+4. The authors and copyright holders shall not be held liable for any use of the Software in violation of applicable laws, including but not limited to use for unlawful, malicious, or unauthorized purposes. The user is solely responsible for ensuring that their use of the Software complies with all applicable local, national, and international laws and regulations.
