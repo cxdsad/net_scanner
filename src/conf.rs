@@ -26,19 +26,19 @@ pub struct Payloads {
 
 #[derive(clap::Parser)]
 pub struct Args {
-    #[arg(short = 'n', long = "tasks_max", default_value = "3000")] // количество задач
+    #[arg(short = 'n', long = "tasks_max", default_value = "3000")] // task count
     tasks: u64,
 
-    #[arg(short = 'l', long = "log_file", default_value = "logs.csv")] // имя файла
+    #[arg(short = 'l', long = "log_file", default_value = "logs.csv")] // filename
     log_file: String,
 
-    #[arg(short = 'f', long = "file_logging", default_value_t = false)] // логировать в файл
+    #[arg(short = 'f', long = "file_logging", default_value_t = false)] // file logging
     file_logging: bool,
 
-    #[arg(short = 'c', long = "console_logging", default_value_t = true)] // логировать в консоль
+    #[arg(short = 'c', long = "console_logging", default_value_t = false)] // console logging
     console: bool,
 
-    #[arg(short = 't', long = "timeout", default_value_t = 700)] // таймаут подключения
+    #[arg(short = 't', long = "timeout", default_value_t = 700)] // timeout
     timeout: u64,
 
     #[arg(short = 'p', long = "payloads_file", default_value = "payloads.json")]
