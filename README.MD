@@ -49,7 +49,7 @@ The `payloads.json` file defines custom payloads to be sent for each port during
 ---
 ## Installation
 
-1. Download the ZIP archive for your operating system from the [Releases](#) page.
+1. Download the ZIP archive for your operating system from the [Releases](Releases) page.
 2. Extract the contents of the ZIP archive to a folder of your choice.
 3. Open a terminal or command prompt and navigate to the extracted folder.
 4. Run the scanner executable with the desired command-line arguments.
