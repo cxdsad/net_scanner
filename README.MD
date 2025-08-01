@@ -43,8 +43,9 @@ The `payloads.json` file defines custom payloads to be sent for each port during
 | `-f, --file_logging`                      | Enable logging to file             | Disabled      |
 | `-c, --console_logging`                   | Enable logging to console          | Disables      |
 | `-t, --timeout <TIMEOUT>`                 | Connection and I/O timeout (ms)    | 700           |
-| `-p, --payloads_file <PAYLOADS_FILENAME>` | Path to payloads JSON file         | payloads.json |
+| `-a, --payloads_file <PAYLOADS_FILENAME>` | Path to payloads JSON file         | payloads.json |
 | `-h, --help`                              | Print help message                 | N/A           |
+| `-p, --placeholders                       | Enable placeholders                |
 ---
 ## Installation
 
@@ -65,3 +66,6 @@ windows (example):
 ```cmd
 net_scanner.exe -n 1000 -c -p payloads.json
 ```
+---
+### Donate
+TON: UQCP53ar_DjWnNOP8SVbW5fKYhjgi5Bm-YEv-V-noQqnVEPp
