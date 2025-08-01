@@ -41,7 +41,7 @@ The `payloads.json` file defines custom payloads to be sent for each port during
 | `-n, --tasks_max <TASKS>`                 | Maximum number of concurrent tasks | 3000          |
 | `-l, --log_file <LOG_FILE>`               | CSV log file name                  | logs.csv      |
 | `-f, --file_logging`                      | Enable logging to file             | Disabled      |
-| `-c, --console_logging`                   | Enable logging to console          | Enabled       |
+| `-c, --console_logging`                   | Enable logging to console          | Disables      |
 | `-t, --timeout <TIMEOUT>`                 | Connection and I/O timeout (ms)    | 700           |
 | `-p, --payloads_file <PAYLOADS_FILENAME>` | Path to payloads JSON file         | payloads.json |
 | `-h, --help`                              | Print help message                 | N/A           |
