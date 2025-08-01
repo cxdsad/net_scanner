@@ -13,6 +13,7 @@ A high-performance asynchronous TCP port scanner written in Rust using `tokio`, 
 - Configurable task limits and timeouts
 - Graceful panic handling with stack traces
 - Concurrent multi-port scanning per host
+- Placeholders (%ip% and %port%)
 
 ---
 
@@ -26,7 +27,7 @@ The `payloads.json` file defines custom payloads to be sent for each port during
 ```json
 {
   "_comment": "This is a comment and will be ignored by the parser",
-  "80":  "GET / HTTP/1.1\\r\\nHost: example.com\\r\\n\\r\\n",
+  "80":  "GET / HTTP/1.1\\r\\nHost: %ip%:%port%\\r\\n\\r\\n",
   "21":  "USER anonymous\\r\\nPASS guest@\\r\\n",
   "443": "HEAD / HTTP/1.0\\r\\n\\r\\n"
 }
