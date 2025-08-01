@@ -57,8 +57,6 @@ The `payloads.json` file defines custom payloads to be sent for each port during
 linux (example):
 ```bash
 chmod +x ./net_scanner
-```
-```bash
 ./net_scanner -n 1000 -c -p payloads.json
 ```
 
