@@ -16,7 +16,6 @@ A high-performance asynchronous TCP port scanner written in Rust using `tokio`, 
 - Placeholders (%ip% and %port%)
 
 ---
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 
 ### 📄 `payloads.json` Format
