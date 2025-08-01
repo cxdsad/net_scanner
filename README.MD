@@ -45,7 +45,7 @@ The `payloads.json` file defines custom payloads to be sent for each port during
 | `-t, --timeout <TIMEOUT>`                 | Connection and I/O timeout (ms)    | 700           |
 | `-a, --payloads_file <PAYLOADS_FILENAME>` | Path to payloads JSON file         | payloads.json |
 | `-h, --help`                              | Print help message                 | N/A           |
-| `-p, --placeholders`                      | Enable placeholders                |
+| `-p, --placeholders`                      | Enable placeholders                | Disabled      |
 ---
 ## Installation
 
