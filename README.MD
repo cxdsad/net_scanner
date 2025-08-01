@@ -57,12 +57,12 @@ The `payloads.json` file defines custom payloads to be sent for each port during
 linux (example):
 ```bash
 chmod +x ./net_scanner
-./net_scanner -n 1000 -c -p payloads.json
+./net_scanner -n 1000 -c -p
 ```
 
 windows (example):
 ```cmd
-net_scanner.exe -n 1000 -c -p payloads.json
+net_scanner.exe -n 1000 -c -p
 ```
 ---
 ### Donate
