@@ -1,5 +1,5 @@
 {
   "_comment": "This file contains payloads for ports. port: payload string",
-  "22": "SSH-2.0-netScanner_1.0\\r\\n",
-  "80": "GET / HTTP/1.1\\r\\nHost: example.com\\r\\n\\r\\n"
+  "80": "GET http://api4.ipify.org/ HTTP/1.1\\r\\nHost: %ip%:%port%\\r\\n\\r\\n",
+  "8080": "GET http://api4.ipify.org/ HTTP/1.1\\r\\nHost: %ip%:%port%\\r\\n\\r\\n"
 }
