@@ -18,6 +18,7 @@ pub static CONSOLE_LOGGING: AtomicBool = AtomicBool::new(false);
 pub static TASK: AtomicU64 = AtomicU64::new(0);
 pub static PAYLOADS: Lazy<RwLock<HashMap<u16, String>>> = Lazy::new(|| RwLock::new(HashMap::new()));
 pub static TIMEOUT: AtomicU64 = AtomicU64::new(0);
+pub static PLACEHOLDERS: AtomicBool = AtomicBool::new(false);
 
 #[derive(Deserialize)]
 pub struct Payloads {
@@ -26,23 +27,27 @@ pub struct Payloads {
 
 #[derive(clap::Parser)]
 pub struct Args {
-    #[arg(short = 'n', long = "tasks_max", default_value = "3000")] // количество задач
+    #[arg(short = 'n', long = "task_max", default_value = "3000")] // task_count
     tasks: u64,
 
-    #[arg(short = 'l', long = "log_file", default_value = "logs.csv")] // имя файла
+    #[arg(short = 'l', long = "log_file", default_value = "logs.csv")] // filename
     log_file: String,
 
-    #[arg(short = 'f', long = "file_logging", default_value_t = false)] // логировать в файл
+    #[arg(short = 'f', long = "file_logging", default_value_t = false)] // file logging
     file_logging: bool,
 
-    #[arg(short = 'c', long = "console_logging", default_value_t = true)] // логировать в консоль
+    #[arg(short = 'c', long = "console_logging", default_value_t = false)] // console logging
     console: bool,
 
-    #[arg(short = 't', long = "timeout", default_value_t = 700)] // таймаут подключения
+    #[arg(short = 't', long = "timeout", default_value_t = 700)] // timeout
     timeout: u64,
 
-    #[arg(short = 'p', long = "payloads_file", default_value = "payloads.json")]
+    #[arg(short = 'a', long = "payloads_file", default_value = "payloads.json")] // payloads filre
     payloads_filename: String,
+
+    #[arg(short = 'p', long = "placeholders", default_value_t = false)]
+    placeholders: bool,
+
 }
 
 pub struct ArgsConfig {
@@ -93,6 +98,7 @@ pub async fn read_clap_conf() -> ArgsConfig {
     FILE_LOGGING.store(args.file_logging,std::sync::atomic::Ordering::Relaxed);
     TASK.store(args.tasks, std::sync::atomic::Ordering::Relaxed);
     TIMEOUT.store(args.timeout, std::sync::atomic::Ordering::Relaxed);
+    PLACEHOLDERS.store(args.placeholders, std::sync::atomic::Ordering::Relaxed);
 
     ArgsConfig {
         log_file: args.log_file,

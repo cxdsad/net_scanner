@@ -1,15 +1,14 @@
-use clap::Parser;
 use csv_async::AsyncSerializer;
 use rand::Rng;
-use serde::{Deserialize, Serialize};
-use std::io::Read;
+use serde::Serialize;
 use std::net::Ipv4Addr;
 use std::sync::atomic::AtomicUsize;
 use std::sync::atomic::Ordering::Relaxed;
 use std::sync::{Arc, OnceLock};
 use tokio::sync::Mutex;
 use tokio::task::JoinSet;
-
+use tokio::io::{BufReader, BufWriter, AsyncBufReadExt, AsyncWriteExt};
+use tokio_util::compat::Compat;
 use crate::conf::*;
 use crate::scan::scan_ip_with_ports;
 use crate::utils::{init_logger, set_panic_hook};
@@ -19,7 +18,7 @@ mod conf;
 mod utils;
 
 // Global async CSV logger protected by a mutex and initialized once
-static LOGGER: OnceLock<Arc<Mutex<AsyncSerializer<tokio_util::compat::Compat<tokio::fs::File>>>>> = OnceLock::new();
+static LOGGER: OnceLock<Arc<Mutex<AsyncSerializer<Compat<BufWriter<tokio::fs::File>>>>>> = OnceLock::new();
 
 // Atomic counter tracking the number of currently active scanning tasks
 static ACTIVE_TASKS: AtomicUsize = AtomicUsize::new(0);

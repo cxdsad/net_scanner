@@ -41,7 +41,7 @@ async fn scan_single_port(_addr: String, port: u16, conn_timeout: u64){
 
     // Retrieve the payload to send based on the port
     let mut payload = String::new();
-    match get_payload(port).await {
+    match get_payload(port, _addr.as_str()).await {
         Ok(_payload) => payload = _payload,
         Err(_) => {
             eprintln!("[critical] Payload for port {port} not found");
@@ -121,7 +121,7 @@ async fn scan_single_port_no_log(_addr: String, port: u16, conn_timeout: u64){
 
     // Retrieve payload for the given port
     let mut payload = String::new();
-    match get_payload(port).await {
+    match get_payload(port, _addr.as_str()).await {
         Ok(_payload) => payload = _payload,
         Err(_) => {
             eprintln!("[critical] Payload for port {port} not found");
